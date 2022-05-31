@@ -6,7 +6,20 @@
     app:startDestination="@id/wordListFragment">
     <fragment
         android:id="@+id/wordListFragment"
-        android:name="com.naldana.dummydictionary.ui.word.WordListFragment"
+        android:name="com.rivas.dummydictionary.ui.word.WordListFragment"
         tools:layout="@layout/fragment_word_list"
-        android:label="WordListFragment" />
+        android:label="WordListFragment" >
+        <action
+            android:id="@+id/action_wordListFragment_to_addWordFragment"
+            app:destination="@id/addWordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addWordFragment"
+        android:name="com.rivas.dummydictionary.ui.word.AddWordFragment"
+        android:label="fragment_add_word"
+        tools:layout="@layout/fragment_add_word" >
+        <action
+            android:id="@+id/action_addWordFragment_to_wordListFragment"
+            app:destination="@id/wordListFragment" />
+    </fragment>
 </navigation>
